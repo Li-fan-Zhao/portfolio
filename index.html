@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Li-Fan Zhao | Product Analyst</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=DM+Sans:wght@400;500&family=Manrope:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel">
+    const copy = {
+      FR: {
+        heroBadge: '',
+        lede: '',
+        sections: {
+          cases: 'Projects',
+          experience: 'Expérience',
+          skills: 'Compétences',
+          education: 'Éducation',
+          extras: 'Langues & Intérêts'
+        },
+        actionLabel: 'Actions clés',
+        outcomeLabel: 'Impact'
+      },
+      EN: {
+        heroBadge: '',
+        lede: '',
+        sections: {
+          cases: 'Projects',
+          experience: 'Experience',
+          skills: 'Skills',
+          education: 'Education',
+          extras: 'Languages & Interests'
+        },
+        actionLabel: 'Key actions',
+        outcomeLabel: 'Outcome'
+      }
+    };
+
+    const data = {
+      caseStudies: {
+        FR: [
+          {
+            title: 'Collaborate stream ownership',
+            org: 'UpClear · Senior Product Analyst',
+            dates: '2025 – Now',
+            location: 'Paris',
+            summary: 'Ownership du stream Collaborate : coordination de 4 développeurs, specs et stratégie de tests.',
+            actions: [
+              'Backlog refinement et animation des daily standups.',
+              'Rédaction de specs produit et plan de tests couvrant 1/3 des cas QA.',
+              'Pilotage des revues produit hebdo avec Yoplait, Goûters Magiques, The Compleat Food Group UK.',
+              'Rapports Power BI pour prioriser la roadmap sur données.'
+            ],
+            outcome: 'Stabilité accrue, tickets post-release réduits de ~20%, décisions produit guidées par la data.',
+            tags: ['Roadmap', 'QA', 'Stakeholder reviews', 'Power BI']
+          },
+          {
+            title: 'Simulateur de promotions temps réel',
+            org: 'UpClear · Product Analyst',
+            dates: '2023 – 2024',
+            location: 'New York / Remote',
+            summary: 'Pilotage d’un outil de simulation de promotions en temps réel pour équipes AMER/EMEA.',
+            actions: [
+              'Cadrage besoin avec équipes business et clients clés.',
+              'Spécifications produit, backlog slicing, suivi dev & QA.',
+              'Instrumentation et tests sur données réelles pour assurer fiabilité.'
+            ],
+            outcome: 'Cycle d’analyse promo estimé à ~50% plus court, adoption par équipes régionales.',
+            tags: ['Product discovery', 'Specs', 'Data QA', 'Analytics']
+          },
+          {
+            title: 'Automatisation du processus de devis',
+            org: "L'Oréal · Stage Analyste Achats",
+            dates: 'Mar 2022 – Sept 2022',
+            location: 'Aulnay-sous-Bois',
+            summary: 'Automatisation de la génération de devis fournisseurs.',
+            actions: [
+              'Développement et déploiement d’un outil automatisant la génération de devis.',
+              'Dashboards consolidés pour le suivi international des contrats.',
+              'Formation des utilisateurs et support post-lancement.'
+            ],
+            outcome: 'Temps passé sur la génération de devis divisé par deux.',
+            tags: ['Automation', 'Dashboards', 'Change mgmt']
+          },
+          {
+            title: 'Moteur de matching de catalogues',
+            org: 'Webedia · Stage Data Analyst',
+            dates: 'Sept 2021 – Mar 2022',
+            location: 'Levallois-Perret',
+            summary: 'Algorithme de matching de catalogues de films.',
+            actions: [
+              'Déploiement d’un modèle atteignant 97% de précision.',
+              'Construction d’outils de visualisation avec web scraping.',
+              'Livraison de supports ad-hoc BI pour les équipes contenu.'
+            ],
+            outcome: 'Fiabilité catalogue améliorée et corrections manuelles réduites.',
+            tags: ['Data science', 'Web scraping', 'BI']
+          }
+        ],
+        EN: [
+          {
+            title: 'Collaborate stream ownership',
+            org: 'UpClear · Senior Product Analyst',
+            dates: '2025 – Now',
+            location: 'Paris',
+            summary: 'Owned the Collaborate stream: coordinated 4 devs, wrote specs, and led testing strategy.',
+            actions: [
+              'Led backlog refinement and daily standups.',
+              'Authored product specs and test plans covering 1/3 of QA cases.',
+              'Ran weekly product reviews with Yoplait, Goûters Magiques, and The Compleat Food Group UK.',
+              'Built Power BI reports to drive roadmap prioritization.'
+            ],
+            outcome: 'Higher release stability; post-release tickets down ~20%; roadmap decisions grounded in data.',
+            tags: ['Roadmap', 'QA', 'Stakeholder reviews', 'Power BI']
+          },
+          {
+            title: 'Real-time promo simulator',
+            org: 'UpClear · Product Analyst',
+            dates: '2023 – 2024',
+            location: 'New York / Remote',
+            summary: 'Led a real-time promotion simulation tool for AMER/EMEA teams.',
+            actions: [
+              'Framed needs with business teams and key clients.',
+              'Wrote specs, sliced backlog, coordinated dev & QA.',
+              'Instrumented and tested on real data to guarantee reliability.'
+            ],
+            outcome: 'Promo analysis cycle estimated ~50% faster; adopted by regional teams.',
+            tags: ['Product discovery', 'Specs', 'Data QA', 'Analytics']
+          },
+          {
+            title: 'Quote automation for raw materials',
+            org: "L'Oréal · Procurement Analyst Intern",
+            dates: 'Mar 2022 – Sept 2022',
+            location: 'Aulnay-sous-Bois',
+            summary: 'Automated supplier quote generation.',
+            actions: [
+              'Built and deployed a tool to automate quote creation.',
+              'Rolled out consolidated dashboards for global contract tracking.',
+              'Trained users and provided post-launch support.'
+            ],
+            outcome: 'Quote cycle time reduced by half.',
+            tags: ['Automation', 'Dashboards', 'Change mgmt']
+          },
+          {
+            title: 'Catalog matching engine',
+            org: 'Webedia · Data Analyst Intern',
+            dates: 'Sept 2021 – Mar 2022',
+            location: 'Levallois-Perret',
+            summary: 'Film catalog matching algorithm.',
+            actions: [
+              'Deployed a model reaching 97% accuracy.',
+              'Built visualization tools with web scraping.',
+              'Delivered ad-hoc BI outputs to content teams.'
+            ],
+            outcome: 'Improved catalog reliability and cut manual corrections.',
+            tags: ['Data science', 'Web scraping', 'BI']
+          }
+        ]
+      }
+    };
+
+    const caseStudies = [
+      {
+        title: 'Real-time promo simulator',
+        org: 'UpClear · Product Analyst',
+        dates: 'Mar 2023 – Mar 2024',
+        location: 'New York / Remote',
+        summary: 'Pilotage d’un outil de simulation de promotions en temps réel pour équipes AMER/EMEA.',
+        actions: [
+          'Cadrage besoin avec équipes business et clients clés.',
+          'Spécifications produit, backlog slicing, suivi dev & QA.',
+          'Instrumentation et tests sur données réelles pour assurer fiabilité.'
+        ],
+        outcome: 'Réduction du cycle d’analyse promo estimée à ~50% et adoption par les équipes régionales.',
+        tags: ['Product discovery', 'Specs', 'Data QA', 'Analytics']
+      },
+      {
+        title: 'Quote automation for raw materials',
+        org: "L'Oréal · Stage Analyste Achats",
+        dates: 'Mar 2022 – Sept 2022',
+        location: 'Aulnay-sous-Bois',
+        summary: 'Automatisation du processus de devis fournisseurs.',
+        actions: [
+          'Développement et déploiement d’un outil automatisant la génération de devis.',
+          'Dashboards consolidés pour le suivi international des contrats.',
+          'Formation des utilisateurs et support post-lancement.'
+        ],
+        outcome: 'Temps passé sur la génération de devis divisé par deux.',
+        tags: ['Automation', 'Dashboards', 'Change mgmt']
+      },
+      {
+        title: 'Catalog matching engine',
+        org: 'Webedia · Stage Data Analyst',
+        dates: 'Sept 2021 – Mar 2022',
+        location: 'Levallois-Perret',
+        summary: 'Algorithme de matching de catalogues de films.',
+        actions: [
+          'Déploiement d’un modèle atteignant 97% de précision.',
+          'Construction d’outils de visualisation avec web scraping.',
+          'Livraison de supports ad-hoc BI pour les équipes contenu.'
+        ],
+        outcome: 'Amélioration de la fiabilité des catalogues et réduction des corrections manuelles.',
+        tags: ['Data science', 'Web scraping', 'BI']
+      }
+    ];
+
+    const experiences = [
+      {
+        title: 'Senior Product Analyst',
+        company: 'UpClear',
+        location: 'Paris, France',
+        dates: '2025 – Now',
+        bullets: [
+          'Pilotage du stream Collaborate avec 4 développeurs : backlog, daily standups, specs et stratégie de tests.',
+          'Gestion QA pour 1/3 des cas de test, stabilité renforcée et tickets post-release en baisse de ~20%.',
+          'Animation de revues produit hebdo avec Yoplait, Goûters Magiques, The Compleat Food Group UK.',
+          'Rapports Power BI pour orienter la roadmap sur des décisions data-driven.'
+        ]
+      },
+      {
+        title: 'Product Analyst',
+        company: 'UpClear',
+        location: 'New York, USA',
+        dates: '2023 – 2024',
+        bullets: [
+          'Collaboration AMER/EMEA pour formaliser besoins clients en fonctionnalités data.',
+          'Pilotage d’un outil de simulation de promotions en temps réel.',
+          'Rédaction de specs, suivi dev, testing et maintenance.'
+        ]
+      },
+      {
+        title: 'Analyste Achats Matières Premières (Stage)',
+        company: "L'Oréal",
+        location: 'Aulnay-sous-Bois, France',
+        dates: 'Mar 2022 – Sept 2022',
+        bullets: [
+          "Automatisation du processus de devis, réduisant l’effort de moitié.",
+          'Dashboards consolidant les données internationales pour le suivi de contrats.'
+        ]
+      },
+      {
+        title: 'Data Analyst (Stage)',
+        company: 'Webedia',
+        location: 'Levallois-Perret, France',
+        dates: 'Sept 2021 – Mar 2022',
+        bullets: [
+          'Déploiement d’un algorithme de matching de catalogues (97% précision).',
+          'Outils de visualisation de données avec web scraping.',
+          'Supports ad-hoc en business intelligence.'
+        ]
+      }
+    ];
+
+    const education = [
+      {
+        title: 'Ingénieur civil des Mines',
+        school: 'Mines Nancy',
+        dates: '2019 – 2023',
+        detail: 'Maths appliquées, génie industriel, data & optimisation.'
+      },
+      {
+        title: 'Master Management et Administration des Entreprises',
+        school: 'IAE Nancy',
+        dates: '2022 – 2023',
+        detail: 'Gestion de projet, marketing stratégique, comptabilité, droit des affaires.'
+      },
+      {
+        title: 'CPGE MP*',
+        school: 'Lycée Saint Louis, Paris',
+        dates: '2017 – 2019',
+        detail: 'Mathématiques & Physique.'
+      }
+    ];
+
+    const skills = {
+      tools: ['BigQuery', 'Power BI', 'Excel', 'Google Data Studio', 'Asana'],
+      languages: ['Python', 'SQL', 'R', 'VBA', 'JavaScript', 'HTML', 'CSS'],
+      product: ['Product discovery', 'Specs & QA', 'A/B thinking', 'Data storytelling'],
+      ops: ['Process automation', 'Backlog slicing', 'Stakeholder comms']
+    };
+
+    const languagesSpoken = [
+      'Anglais · C1 (IELTS 7.5)',
+      'Espagnol · B2',
+      'Chinois · HSK3, bilingue à l’oral',
+      'Allemand · B1'
+    ];
+
+    const interests = [
+      'Course à pied (marathon finisher)',
+      'Lecture',
+      'Théâtre',
+      'Lead d’une équipe TEDxMinesNancy (10 étudiants)'
+    ];
+
+    const Link = ({ href, children, download }) => (
+      <a
+        className="link"
+        href={href}
+        target="_blank"
+        rel="noreferrer"
+        {...(download ? { download } : {})}
+      >
+        {children}
+      </a>
+    );
+
+    const Section = ({ title, children, id }) => (
+      <section id={id} className="section">
+        <div className="section__header">
+          <div className="marker" />
+          <h2>{title}</h2>
+        </div>
+        <div>{children}</div>
+      </section>
+    );
+
+    const CaseCard = ({ item, labels }) => (
+      <article className="card">
+        <div className="card__header">
+          <div>
+            <p className="eyebrow">{item.dates}</p>
+            <h3>{item.title}</h3>
+            <p className="muted">{item.org} · {item.location}</p>
+          </div>
+        </div>
+        <p className="detail">{item.summary}</p>
+        <div className="pill-row" style={{ marginTop: '10px' }}>
+          {item.tags.map((t, i) => <Pill text={t} key={i} />)}
+        </div>
+        <div className="steps">
+          <p className="eyebrow">{labels.actionLabel}</p>
+          <ul>
+            {item.actions.map((b, i) => <li key={i}>{b}</li>)}
+          </ul>
+          <div className="outcome">{labels.outcomeLabel}: {item.outcome}</div>
+        </div>
+      </article>
+    );
+
+    const LangToggle = ({ lang, onChange }) => (
+      <div className="lang-toggle">
+        {['FR', 'EN'].map(code => (
+          <button
+            key={code}
+            className={`lang-btn ${lang === code ? 'active' : ''}`}
+            onClick={() => onChange(code)}
+          >{code}</button>
+        ))}
+      </div>
+    );
+
+    const ExperienceCard = ({ exp }) => (
+      <article className="card">
+        <div className="card__header">
+          <div>
+            <p className="eyebrow">{exp.dates}</p>
+            <h3>{exp.title} · {exp.company}</h3>
+            <p className="muted">{exp.location}</p>
+          </div>
+        </div>
+        <ul>
+          {exp.bullets.map((b, i) => <li key={i}>{b}</li>)}
+        </ul>
+      </article>
+    );
+
+    const Pill = ({ text }) => <span className="pill">{text}</span>;
+
+    const App = () => {
+      const [lang, setLang] = React.useState('FR');
+      const text = copy[lang];
+      const caseStudies = data.caseStudies[lang];
+
+      return (
+        <div className="page">
+          <div className="noise" aria-hidden />
+
+          <div className="topbar">
+            <LangToggle lang={lang} onChange={setLang} />
+          </div>
+
+          <header className="hero">
+            <h1>Li-Fan Zhao</h1>
+            <div className="hero__actions">
+              <Link href="./CV_Zhao.pdf" download="CV_Zhao.pdf">Resume</Link>
+              <Link href="https://www.linkedin.com/in/li-fan-zhao/">LinkedIn</Link>
+            </div>
+          </header>
+
+          <main>
+            <Section title={text.sections.cases} id="cases">
+              <div className="h-scroll">
+                {caseStudies.map((item, idx) => <CaseCard item={item} labels={text} key={idx} />)}
+              </div>
+            </Section>
+
+            <Section title={text.sections.experience} id="experience">
+              <div className="grid single-column">
+                {experiences.map((exp, idx) => <ExperienceCard exp={exp} key={idx} />)}
+              </div>
+            </Section>
+
+            <Section title={text.sections.skills} id="skills">
+              <div className="card stack">
+                <div>
+                  <p className="eyebrow">Product toolkit</p>
+                  <div className="pill-row">{skills.product.map((s, i) => <Pill text={s} key={i} />)}</div>
+                </div>
+                <div>
+                  <p className="eyebrow">Outils & Data</p>
+                  <div className="pill-row">{skills.tools.map((s, i) => <Pill text={s} key={i} />)}</div>
+                </div>
+                <div>
+                  <p className="eyebrow">Langages</p>
+                  <div className="pill-row">{skills.languages.map((s, i) => <Pill text={s} key={i} />)}</div>
+                </div>
+                <div>
+                  <p className="eyebrow">Ops</p>
+                  <div className="pill-row">{skills.ops.map((s, i) => <Pill text={s} key={i} />)}</div>
+                </div>
+              </div>
+            </Section>
+
+            <Section title={text.sections.education} id="education">
+              <div className="timeline">
+                {education.map((edu, i) => (
+                  <article className="timeline__item" key={i}>
+                    <div className="timeline__dot" />
+                    <div>
+                      <p className="eyebrow">{edu.dates}</p>
+                      <h3>{edu.title}</h3>
+                      <p className="muted">{edu.school}</p>
+                      <p className="detail">{edu.detail}</p>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </Section>
+
+            <Section title={text.sections.extras} id="extras">
+              <div className="card stack">
+                <div>
+                  <p className="eyebrow">Langues</p>
+                  <div className="pill-row">{languagesSpoken.map((l, i) => <Pill text={l} key={i} />)}</div>
+                </div>
+                <div>
+                  <p className="eyebrow">Centres d'intérêt</p>
+                  <div className="pill-row">{interests.map((l, i) => <Pill text={l} key={i} />)}</div>
+                </div>
+              </div>
+            </Section>
+          </main>
+
+          <footer className="footer">
+            <div>
+              <p className="eyebrow">Disponible pour projets produits/data</p>
+              <p className="muted">Basée à Paris · mobile international</p>
+            </div>
+            <div className="hero__actions">
+              <Link href="./CV_Zhao.pdf" download="CV_Zhao.pdf">Resume</Link>
+              <Link href="https://www.linkedin.com/in/li-fan-zhao/">LinkedIn</Link>
+            </div>
+          </footer>
+        </div>
+      );
+    };
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<App />);
+  </script>
+</body>
+</html>

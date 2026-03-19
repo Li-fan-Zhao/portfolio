@@ -240,6 +240,9 @@ a { color: inherit; }
 .pill-row { display: flex; flex-wrap: wrap; gap: 10px; }
 
 .pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   padding: 8px 12px;
   border-radius: 999px;
   border: 1px solid rgba(15, 23, 42, 0.08);
@@ -247,6 +250,11 @@ a { color: inherit; }
   color: #0f1720;
   font-size: 15px;
   box-shadow: inset 0 1px 0 rgba(255,255,255,0.8);
+}
+
+.pill__icon {
+  font-size: 13px;
+  color: var(--accent-strong);
 }
 
 .topbar { display: flex; justify-content: flex-end; margin-bottom: 12px; position: sticky; top: 16px; z-index: 2; }

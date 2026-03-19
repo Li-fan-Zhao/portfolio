@@ -27,22 +27,22 @@
         },
         hero: {
           intro: 'Bonjour, je suis',
-          role: 'Product Analyst'
+          role: ''
         },
-        about: "Product Analyst avec une approche à la fois produit, data et opérationnelle, j'aime concevoir des solutions concrètes, faciles à utiliser et utiles.",
+        about: "Avec une approche à la fois produit, data et opérationnelle, j'aime concevoir des solutions concrètes et faciles à utiliser.",
         sections: {
           cases: 'Projets',
           experience: 'Expériences',
           skills: 'Compétences',
           education: 'Éducation',
-          extras: 'Langues & Intérêts',
+          languages: 'Langues',
+          interests: 'Centres d’intérêt',
           contact: 'Contact'
         },
         skillsLabels: {
-          product: 'Product toolkit',
+          product: 'Produit',
           tools: 'Outils & Data',
-          languages: 'Langages',
-          ops: 'Ops'
+          languages: 'Langages'
         },
         extrasLabels: {
           languages: 'Langues',
@@ -65,22 +65,22 @@
         },
         hero: {
           intro: "Hi, I'm",
-          role: 'Product Analyst'
+          role: ''
         },
-        about: "I'm a Product Analyst with experience across product, data, and business operations. I like understanding how teams work, identifying what slows them down, and turning those insights into practical improvements, from dashboards and automation to product features and reporting.",
+        about: "I work at the intersection of product, data, and business operations. I like understanding how teams work, identifying what slows them down, and turning those insights into practical improvements, from dashboards and automation to product features and reporting.",
         sections: {
           cases: 'Projects',
           experience: 'Experience',
           skills: 'Skills',
           education: 'Education',
-          extras: 'Languages & Interests',
+          languages: 'Languages',
+          interests: 'Interests',
           contact: 'Get in touch'
         },
         skillsLabels: {
           product: 'Product toolkit',
           tools: 'Tools & Data',
-          languages: 'Languages',
-          ops: 'Ops'
+          languages: 'Languages'
         },
         extrasLabels: {
           languages: 'Languages',
@@ -110,8 +110,8 @@
               'Spécifications produit, backlog slicing, suivi dev & QA.',
               'Instrumentation et tests sur données réelles pour assurer fiabilité.'
             ],
-            outcome: 'Cycle d’analyse promo estimé à ~50% plus court, adoption par équipes régionales.',
-            tags: ['Discovery produit', 'Specs', 'QA data', 'Analytics']
+            outcome: 'Accélération de la prise de décision grâce à des simulations promotionnelles fiables et adoption progressive par les clients AMER.',
+            tags: ['Business requirements', 'Specs', 'QA', 'Communication']
           },
           {
             title: 'Automatisation du processus de devis',
@@ -125,7 +125,7 @@
               'Formation des utilisateurs et support post-lancement.'
             ],
             outcome: 'Temps passé sur la génération de devis divisé par deux.',
-            tags: ['Automatisation', 'Dashboards', 'Conduite du changement']
+            tags: ['Automatisation', 'BI', 'Reporting']
           },
           {
             title: 'Moteur de matching de catalogues',
@@ -134,8 +134,8 @@
             location: 'Levallois-Perret',
             summary: 'Conception et mise en production d’un algorithme semi-automatique de matching entre showtimes partenaires et base AlloCine.',
             actions: [
-              'Pilotage end-to-end, du pitch initial au déploiement production.',
-              'Conception d’une logique CIC (Cleaning, Indexing, Comparing) avec regex/unidecode, score de similarité multi-distances (Levenshtein, Damerau-Levenshtein, Jaro-Winkler, LCS) et seuils calibrés.',
+              'Pilotage end-to-end, du pitch initial au déploiement en production et suivi avec les équipes métiers.',
+              "Construction de l'algorithme basé sur le calcul de scores de distances d'édition (Levenshtein, Damerau-Levenshtein, Jaro-Winkler, LCS) et seuils calibrés.",
               {
                 text: 'Rédaction d’un article de vulgarisation technique pour étudiants : ',
                 linkText: 'blog post',
@@ -143,7 +143,7 @@
               }
             ],
             outcome: '97% de précision en production, fiabilité des séances améliorée et réduction des corrections manuelles.',
-            tags: ['Matching de donnees', 'Web scraping', 'Algorithmes texte', 'BI']
+            tags: ['Matching de donnees', 'Web scraping', 'Regex',"Distance d'édition"]
           }
         ],
         EN: [
@@ -158,8 +158,8 @@
               'Wrote specs, sliced backlog, coordinated dev & QA.',
               'Instrumented and tested on real data to guarantee reliability.'
             ],
-            outcome: 'Promo analysis cycle estimated ~50% faster; adopted by regional teams.',
-            tags: ['Product discovery', 'Specs', 'Data QA', 'Analytics']
+            outcome: 'Faster decision-making on promotional scenarios and progressive adoption across AMER clients.',
+            tags: ['Business requirements', 'Specs', 'QA', 'Communication']
           },
           {
             title: 'Quote automation for raw materials',
@@ -173,7 +173,7 @@
               'Trained users and provided post-launch support.'
             ],
             outcome: 'Quote cycle time reduced by half.',
-            tags: ['Automation', 'Dashboards', 'Change mgmt']
+            tags: ['Automation', 'BI', 'Reporting']
           },
           {
             title: 'Catalog matching engine',
@@ -183,7 +183,7 @@
             summary: 'Designed and shipped a semi-automatic matching algorithm between partner showtime feeds and the AlloCine catalog.',
             actions: [
               'Led end-to-end delivery from initial pitch to production release.',
-              'Built a CIC (Cleaning, Indexing, Comparing) pipeline using regex/unidecode and multi-distance text scoring (Levenshtein, Damerau-Levenshtein, Jaro-Winkler, LCS) with tuned thresholds.',
+              'Built a pipeline based on text scoring (Levenshtein, Damerau-Levenshtein, Jaro-Winkler, LCS) and tuned thresholds.',
               {
                 text: 'Wrote a technical ',
                 linkText: 'blog post',
@@ -191,7 +191,7 @@
               }
             ],
             outcome: 'Reached 97% production precision, improving showtime reliability while reducing manual reconciliation.',
-            tags: ['Data matching', 'Web scraping', 'Text algorithms', 'BI']
+            tags: ['Data Matching', 'Web scraping', 'Regex', "String similarity"]
           }
         ]
       },
@@ -201,7 +201,7 @@
             title: 'Senior Product Analyst',
             company: 'UpClear',
             location: 'Paris, France',
-            dates: "2024 – Aujourd'hui",
+            dates: "Mar 2024 – Aujourd'hui",
             bullets: [
               "Responsable du stream Collaborate, en charge de la stabilisation et de l'évolution des fonctionnalités au coeur de BluePlanner, outil de gestion de promotions et de revenus.",
               "Coordination d'une équipe de 4 développeurs : gestion du backlog, redaction des user stories, suivi du developpement, tests et mises en production.",
@@ -212,7 +212,7 @@
             title: 'Product Analyst',
             company: 'UpClear',
             location: 'New York, USA',
-            dates: '2023 – 2024',
+            dates: 'Mar 2023 – Mar 2024',
             bullets: [
               "Pilotage de Smart Matching, un algorithme de rapprochement automatisé entre factures et promotions basé sur le calcul de scores de similarité.",
               "Collaboration directe avec les équipes métier pour recueillir les besoins et faire évoluer le produit à partir des retours clients.",
@@ -223,7 +223,7 @@
             title: 'Analyste Achats Matières Premières (Stage)',
             company: "L'Oréal",
             location: 'Aulnay-sous-Bois, France',
-            dates: 'Mar 2022 – Sept 2022',
+            dates: 'Mar 2022 – Sep 2022',
             bullets: [
               "Automatisation du processus de devis fournisseurs en consolidant plusieurs sources de donnees dans un document unique.",
               "Création de dashboard pour suivre la consommation des contrats et fiabiliser le pilotage des achats de matières premières.",
@@ -234,7 +234,7 @@
             title: 'Data Analyst (Stage)',
             company: 'Webedia',
             location: 'Levallois-Perret, France',
-            dates: 'Sept 2021 – Mar 2022',
+            dates: 'Sep 2021 – Mar 2022',
             bullets: [
               'Construction et déploiement d’un outil de matching de catalogues films avec 97% de précision.',
               'Réconciliation de données de séances multi-sources avec AlloCiné.',
@@ -247,7 +247,7 @@
             title: 'Senior Product Analyst',
             company: 'UpClear',
             location: 'Paris, France',
-            dates: '2024 – Now',
+            dates: 'Mar 2024 – Now',
             bullets: [
               'Owned the Collaborate stream to stabilize and improve the core features of BluePlanner, a trade promotion management software.',
               'Coordinated a 4-developer team across backlog management, user stories, development follow-up, testing, and production releases.',
@@ -259,7 +259,7 @@
             title: 'Product Analyst',
             company: 'UpClear',
             location: 'New York, USA',
-            dates: '2023 – 2024',
+            dates: 'Mar 2023 – Mar 2024',
             bullets: [
               'Led Smart Matching, a ranking algorithm that suggests the best promotion to reconcile invoices from PDF attachments.',  
               'Worked directly with business teams and clients to shape requirements and iterate from production feedback.',
@@ -270,7 +270,7 @@
             title: 'Procurement Analyst Intern',
             company: "L'Oréal",
             location: 'Aulnay-sous-Bois, France',
-            dates: 'Mar 2022 – Sept 2022',
+            dates: 'Mar 2022 – Sep 2022',
             bullets: [
               'Automated the supplier quotation process by consolidating multiple data sources into one reliable output.',
               'Applied business rules to calculate final prices and volumes automatically.',
@@ -282,7 +282,7 @@
             title: 'Data Analyst Intern',
             company: 'Webedia',
             location: 'Levallois-Perret, France',
-            dates: 'Sept 2021 – Mar 2022',
+            dates: 'Sep 2021 – Mar 2022',
             bullets: [
               'Owned end-to-end delivery of a movie-catalog matching tool (pitch to production), reaching 97% precision.',
               'Reconciled multi-theater showtime feeds with AlloCine data using regex-based text normalization and similarity distances.',
@@ -335,16 +335,14 @@
       },
       skills: {
         FR: {
-          tools: ['BigQuery', 'Power BI', 'Excel', 'Google Data Studio', 'Asana'],
+          tools: ['Google BigQuery', 'Power BI', 'Google Data Studio', 'Microsoft Fabric', 'Rivery (ETL)'],
           languages: ['Python', 'SQL', 'R', 'VBA', 'JavaScript', 'HTML', 'CSS'],
-          product: ['Discovery produit', 'Specs & QA', 'Tests A/B', 'Data storytelling'],
-          ops: ['Automatisation des processus', 'Backlog slicing', 'Communication parties prenantes']
+          product: ['Backlog management', 'rédaction de user stories', 'développement agile']
         },
         EN: {
-          tools: ['BigQuery', 'Power BI', 'Excel', 'Google Data Studio', 'Asana'],
+          tools: ['Google BigQuery', 'Power BI', 'Google Data Studio', 'Microsoft Fabric', 'Rivery (ETL)'],
           languages: ['Python', 'SQL', 'R', 'VBA', 'JavaScript', 'HTML', 'CSS'],
-          product: ['Product discovery', 'Specs & QA', 'A/B thinking', 'Data storytelling'],
-          ops: ['Process automation', 'Backlog slicing', 'Stakeholder comms']
+          product: ['Backlog management', 'user stories / product specs', 'agile development']
         }
       },
       languagesSpoken: {
@@ -365,16 +363,16 @@
       },
       interests: {
         FR: [
-          'Course à pied (marathon finisher)',
-          'Lecture',
-          'Théâtre',
-          'Lead d’une équipe TEDxMinesNancy (10 étudiants)'
+          { text: 'Course à pied (marathon finisher)', icon: 'fa-person-running' },
+          { text: 'Yoga', icon: 'fa-spa' },
+          { text: 'Lecture', icon: 'fa-book-open' },
+          { text: 'Voyage', icon: 'fa-mountain' }
         ],
         EN: [
-          'Running (marathon finisher)',
-          'Reading',
-          'Theater',
-          'Led a TEDxMinesNancy team (10 students)'
+          { text: 'Running (marathon finisher)', icon: 'fa-person-running' },
+          { text: 'Yoga', icon: 'fa-spa' },
+          { text: 'Reading', icon: 'fa-book-open' },
+          { text: 'Travel', icon: 'fa-mountain' }
         ]
       }
     };
@@ -384,15 +382,15 @@
         title: 'Real-time promo simulator',
         org: 'UpClear · Product Analyst',
         dates: 'Mar 2023 – Mar 2024',
-        location: 'New York / Remote',
-        summary: 'Pilotage d’un outil de simulation de promotions en temps réel pour équipes AMER/EMEA.',
+        location: 'New York',
+        summary: 'Pilotage d’un outil de simulation de promotions en temps réel.',
         actions: [
           'Cadrage besoin avec équipes business et clients clés.',
           'Spécifications produit, backlog slicing, suivi dev & QA.',
           'Instrumentation et tests sur données réelles pour assurer fiabilité.'
         ],
-        outcome: 'Réduction du cycle d’analyse promo estimée à ~50% et adoption par les équipes régionales.',
-        tags: ['Product discovery', 'Specs', 'Data QA', 'Analytics']
+        outcome: 'Accélération de la prise de décision grâce à des simulations promotionnelles fiables et adoption progressive par les clients AMER.',
+        tags: ['Business requirements', 'Specs', 'QA', 'Communication']
       },
       {
         title: 'Quote automation for raw materials',
@@ -406,7 +404,7 @@
           'Formation des utilisateurs et support post-lancement.'
         ],
         outcome: 'Temps passé sur la génération de devis divisé par deux.',
-        tags: ['Automation', 'Dashboards', 'Change mgmt']
+        tags: ['Automation', 'BI', 'Reporting']
       },
       {
         title: 'Catalog matching engine',
@@ -420,7 +418,7 @@
           'Livraison de supports ad-hoc BI pour les équipes contenu.'
         ],
         outcome: 'Amélioration de la fiabilité des catalogues et réduction des corrections manuelles.',
-        tags: ['Data science', 'Web scraping', 'BI']
+        tags: ['Data science', 'Web scraping', "Distance d'édition"]
       }
     ];
 
@@ -447,7 +445,8 @@
       experience: 'fa-briefcase',
       skills: 'fa-gears',
       education: 'fa-graduation-cap',
-      extras: 'fa-heart',
+      languages: 'fa-comment-dots',
+      interests: 'fa-heart',
       contact: 'fa-paper-plane'
     };
 
@@ -532,7 +531,12 @@
       </article>
     );
 
-    const Pill = ({ text }) => <span className="pill">{text}</span>;
+    const Pill = ({ text, icon }) => (
+      <span className="pill">
+        {icon ? <i className={`fa-solid ${icon} pill__icon`} aria-hidden="true"></i> : null}
+        <span>{text}</span>
+      </span>
+    );
 
     const App = () => {
       const [lang, setLang] = React.useState('FR');
@@ -602,10 +606,6 @@
                   <p className="eyebrow">{text.skillsLabels.languages}</p>
                   <div className="pill-row">{skillItems.languages.map((s, i) => <Pill text={s} key={i} />)}</div>
                 </div>
-                <div>
-                  <p className="eyebrow">{text.skillsLabels.ops}</p>
-                  <div className="pill-row">{skillItems.ops.map((s, i) => <Pill text={s} key={i} />)}</div>
-                </div>
               </div>
             </Section>
 
@@ -632,16 +632,15 @@
               </div>
             </Section>
 
-            <Section title={text.sections.extras} id="extras">
+            <Section title={text.sections.languages} id="languages">
               <div className="card stack">
-                <div>
-                  <p className="eyebrow">{text.extrasLabels.languages}</p>
-                  <div className="pill-row">{spokenItems.map((l, i) => <Pill text={l} key={i} />)}</div>
-                </div>
-                <div>
-                  <p className="eyebrow">{text.extrasLabels.interests}</p>
-                  <div className="pill-row">{interestItems.map((l, i) => <Pill text={l} key={i} />)}</div>
-                </div>
+                <div className="pill-row">{spokenItems.map((l, i) => <Pill text={l} key={i} />)}</div>
+              </div>
+            </Section>
+
+            <Section title={text.sections.interests} id="interests">
+              <div className="card stack">
+                <div className="pill-row">{interestItems.map((item, i) => <Pill text={item.text} icon={item.icon} key={i} />)}</div>
               </div>
             </Section>
 
